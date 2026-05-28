@@ -1,0 +1,6 @@
+Model,Accuracy,Precision (Weighted),Recall (Weighted),F1-Score (Weighted)
+gradient_boosting,0.7326,0.7226,0.7326,0.7074
+random_forest,0.727,0.713,0.727,0.6961
+knn,0.6464,0.6326,0.6464,0.6347
+logistic_regression,0.6495,0.6165,0.6495,0.6141
+svm,0.6322,0.5902,0.6322,0.5457

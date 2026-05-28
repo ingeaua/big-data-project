@@ -1,0 +1,4 @@
+Model,Original_Accuracy,Original_F1,PCA_Accuracy,PCA_F1,ICA_Accuracy,ICA_F1
+Logistic Regression,0.6495,0.6141,0.6153,0.5488,0.6153,0.5488
+Random Forest,0.727,0.6961,0.6218,0.5333,0.6218,0.5346
+XGBoost,0.7326,0.7074,0.6214,0.5324,0.6218,0.535
