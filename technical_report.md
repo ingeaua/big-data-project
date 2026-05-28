@@ -157,6 +157,12 @@ To test the efficacy of our linear dimension reductions, we trained the top mode
 ### 8. Discussion
 The experimental results yield several distinct conclusions regarding machine learning applications in seismology.
 
+**Hyperparameter Tuning & Best Models:**
+To determine the absolute best experimental setup, we conducted a randomized hyperparameter search (`RandomizedSearchCV`) on our top-performing ensembles (Random Forest and XGBoost) using a 100,000-instance stratified sample of the training data to mitigate the massive computational cost. 
+* **Optimal Random Forest parameters:** `n_estimators=200`, `max_depth=30`, `min_samples_split=10`, `min_samples_leaf=1` (Cross-Validated F1: 0.7234)
+* **Optimal XGBoost parameters:** `n_estimators=300`, `max_depth=9`, `learning_rate=0.05`, `subsample=0.9`, `colsample_bytree=0.8` (Cross-Validated F1: 0.7324)
+The optimized parameters confirm the robustness of tree-based models over default configurations on massive, imbalanced datasets.
+
 **Superiority of Ensemble Tree Methods:**
 XGBoost is the unambiguous superior model for this dataset, achieving an F1-score of 0.7074. The performance gap between tree-based ensembles (XGBoost, Random Forest) and linear/distance models (LR, SVM, KNN) strongly indicates that the relationship between the geographic/temporal features and earthquake magnitude is highly complex and non-linear. Linear hyperplanes (SVM, LR) are insufficiently flexible to map geographical coordinates and raw temporal integers to physical severities.
 
